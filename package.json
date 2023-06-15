@@ -25,13 +25,13 @@
     "react-icons": "^4.8.0",
     "react-query": "^3.39.3",
     "typescript": "^5.0.4",
-    "yup": "^1.1.1"
+    "yup": "^1.1.1",
+    "miragejs": "^0.1.47"
   },
   "devDependencies": {
     "@types/faker": "^5.5.3",
     "@types/node": "^18.16.0",
     "@types/react": "^18.2.0",
-    "faker": "^5.5.3",
-    "miragejs": "^0.1.47"
+    "faker": "^5.5.3"
   }
 }
