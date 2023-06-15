@@ -1,6 +1,7 @@
 import { Flex, Button, Stack } from "@chakra-ui/react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import * as yup from "yup";
+import { useRouter } from "next/navigation";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Input as FormInput } from "../components/Form/Input";
 
@@ -23,8 +24,14 @@ export default function SignIn(): JSX.Element {
     defaultValues: { email: "", password: "" },
     resolver: yupResolver(signInFormSchema),
   });
+  const { push } = useRouter();
 
-  const handleSignIn: SubmitHandler<FormValues> = async ({ email, password }) => {};
+  const handleSignIn: SubmitHandler<FormValues> = async ({
+    email,
+    password,
+  }) => {
+    push("/dashboard");
+  };
 
   return (
     <Flex w="100vw" h="100vh" align="center" justify="center">
